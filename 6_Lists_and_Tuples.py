@@ -1,5 +1,11 @@
 # Lesson 6: Lists and Tuples
 
+#             Mutable | Ordered | Indexing | Duplicate Data
+# LIST           ✔        ✔        ✔             ✔
+# TUPLE          ❌       ✔        ✔             ✔
+# SET            ✔        ❌       ❌            ❌
+# DICTIONARY     ✔        ✔        ✔             ❌
+
 # * Lists
 letters = ["a", "b", "c", "d", "e"]
 words = ["One", "Two", "Three", "Four", "Five"]
