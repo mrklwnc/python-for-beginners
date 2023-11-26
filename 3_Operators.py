@@ -25,3 +25,6 @@ else:
 
 # Ternary Operators
 print("It is greater") if 15 > 10 else print("It is less")
+
+if 15 > 10:
+    print("It is true")

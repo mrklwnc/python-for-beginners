@@ -14,7 +14,7 @@ print(type(first) == str)
 # ? Checks if the variable is an instance of a string (or whatever data type you put as the 2nd parameter inside the isinstance() function) and then returns a boolean
 print(isinstance(first, str))
 
-# ? Constructor function (str(), int(), bool(), list())
+# ? Constructor function (str(), int(), bool(), list(), tuple(), dict(), set())
 pizza = str("Pepperoni")
 print(type(pizza))
 print(type(pizza) == str)

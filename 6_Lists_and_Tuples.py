@@ -1,10 +1,10 @@
 # Lesson 6: Lists and Tuples
 
-#             Mutable | Ordered | Indexing | Duplicate Data
-# LIST           ✔        ✔        ✔             ✔
-# TUPLE          ❌       ✔        ✔             ✔
-# SET            ✔        ❌       ❌            ❌
-# DICTIONARY     ✔        ✔        ✔             ❌
+# !             Mutable | Ordered | Indexing | Duplicate Data
+# ? LIST           ✔        ✔        ✔             ✔
+# ? TUPLE          ❌       ✔        ✔             ✔
+# ? SET            ✔        ❌       ❌            ❌
+# ? DICTIONARY     ✔        ✔        ✔             ❌
 
 # * Lists
 letters = ["a", "b", "c", "d", "e"]
@@ -94,7 +94,12 @@ newTuple = tuple(newList)
 print(newTuple)
 
 # Unpacking tuples
-(one, *two, three) = anotherTuple
+(
+    one,
+    *two,
+    three,
+) = anotherTuple  # The variable "one" represents the first index, "three" as the last index, and "*two" the data/s in-between the tuple
+
 print(one)
 print(two)
 print(three)
