@@ -27,10 +27,10 @@ def my_function():
 
 
 my_function()
-# ! Functions can also be a local scope
+# ? Functions can also be a local scope
 
 
-# ! Can you see the variable x?
+# ? Can you see the variable x?
 # ? x is used as a global and a local variable, local scope's are priority to be printed even though they are the same variable name
 
 

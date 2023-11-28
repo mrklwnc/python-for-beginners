@@ -55,7 +55,7 @@ def my_country(country="Philippines"):
 
 my_country("Canada")
 
-# ! You can pass a list, tuple, dictionary, or a set as an argument
+# ? You can pass a list, tuple, dictionary, or a set as an argument
 
 
 # Return Values
@@ -68,7 +68,7 @@ print(my_sum(1, 2, 3, 4, 5))
 
 # PASS statement
 def empty_function():
-    # ! NOTE: Function definition cannot be empty, to avoid error, use PASS statement
+    # ? NOTE: Function definition cannot be empty, to avoid error, use PASS statement
 
     # To be filled with logic later on
     pass

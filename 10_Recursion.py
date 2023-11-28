@@ -28,7 +28,7 @@ def factorial(n):
 result = factorial(5)
 print(result)
 
-# ! NOTE: Let Chat-GPT explain this to you like you are a 5 years old
+# ? NOTE: Let Chat-GPT explain this to you like you are a 5 years old
 
 
 # Rock Paper Scissors Recursion (Advanced)

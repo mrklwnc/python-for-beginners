@@ -169,13 +169,13 @@ print("My Games", myGames)
 
 # Remove an item in a set
 games.remove("Apex Legends")  # using .remove()
-# ! NOTE: If item doesn't exist, RAISE an error!
+# ? NOTE: If item doesn't exist, RAISE an error!
 
 games.discard("WildRift")  # using .discard()
-# ! NOTE: If item doesn't exist, WILL NOT RAISE an error!
+# ? NOTE: If item doesn't exist, WILL NOT RAISE an error!
 
 poppedgame = games.pop()  # using .pop()
-# ! NOTE: This method will remove a random item
+# ? NOTE: This method will remove a random item
 
 print("Games", games)
 print("Popped Item", poppedgame)
