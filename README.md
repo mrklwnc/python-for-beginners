@@ -1,4 +1,4 @@
-# python-for-beginners
+# Python for Beginners 🐍
 
 Introduction to Python Programming Language
 
