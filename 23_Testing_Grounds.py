@@ -22,3 +22,13 @@ with open("countries-data.json") as data_file:
 
 print(provinces_list)
 # print(municipality_list)
+
+num = input("Enter a number:\n")
+
+n = int(num)
+
+a = ["1", "2", "3", "4", "5", "6", "7", "8",
+     "9", "10", "11", "12", "13", "14", "15"]
+
+if (n := len(a)) > 10:
+    print(f"List is too long ({n} elements, expected <= 10)")
