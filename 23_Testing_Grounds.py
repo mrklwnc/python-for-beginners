@@ -1,34 +1,43 @@
-import json
+import hmac
+import hashlib
 
-provinces_list = []
+def ksort(obj):
+    """Sort objects in an alphabetical order"""
 
-municipality_list = []
+    mykeys = list(obj.keys())
+    mykeys.sort()
 
+    return {i: obj[i] for i in mykeys}
 
-with open("countries-data.json") as data_file:
-    data = json.load(data_file)
+def hash_string(obj):
+    """Returns a hashable string"""
 
-    # print(data["countries"][0]["provinces"][0]["name"])
+    hashing_string = ""
 
-    provinces = data["countries"][0]["provinces"][0:5]
+    for key in obj.keys():
+        if key != "hash":
+            hashing_string += f"{obj[key]}"
 
-    for province in provinces:
-        provinces_list.append(province["name"].upper())
+    return hashing_string
 
-        # for municipality in province["municipalities"]:
-        #     # municipality_list.append(municipality["name"].upper())
-        #     print(municipality)
+# Sample body from the request
+request_body = {
+    "merchant_id": 10412,
+    "amount": "500.00",
+    "invoice": "JAREFERENCE00003",
+    "reference_id": "JAREFERENCE00003",
+    "callback_url_be": "https://vinu.jaarce.com/webhook",
+    "skip_receipt": 0,
+    "hash": "CQiDMvu4sIW6",
+}
 
+# Sort Alphabetically
+sorted_body = ksort(request_body)
 
-print(provinces_list)
-# print(municipality_list)
+# Convert to a byte string
+hashing_string = hash_string(sorted_body).encode()
 
-num = input("Enter a number:\n")
+# Encrypt to HmacSHA256
+hash = hmac.new(b"CQiDMvu4sIW6", hashing_string, hashlib.sha256).hexdigest()
 
-n = int(num)
-
-a = ["1", "2", "3", "4", "5", "6", "7", "8",
-     "9", "10", "11", "12", "13", "14", "15"]
-
-if (n := len(a)) > 10:
-    print(f"List is too long ({n} elements, expected <= 10)")
+print("Hash", hash)
